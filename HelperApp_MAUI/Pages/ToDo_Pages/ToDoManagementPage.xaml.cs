@@ -51,7 +51,10 @@ public partial class ToDoManagementPage : ContentPage
     {
         Debug.WriteLine("--Canceled Todo Management--");
 
-        await _dataService.DeleteToDoAsync(ToDo.Id);
+        if (_isNew) 
+        {
+            await _dataService.DeleteToDoAsync(ToDo.Id);
+        }
 
         await Shell.Current.GoToAsync("..");
     }

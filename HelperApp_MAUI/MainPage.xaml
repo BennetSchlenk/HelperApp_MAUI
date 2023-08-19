@@ -2,27 +2,25 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HelperApp_MAUI.MainPage"
-             Title="Helper App Menu">
+             NavigationPage.HasNavigationBar="False"
+             Title="">
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add to Do" Clicked="OnAddToDoClicked" />
-    </ContentPage.ToolbarItems>
-
-    <CollectionView x:Name="collectionView"
-                    SelectionMode="Single"
-                    SelectionChanged="OnSelectionChanged"
-                    Margin="30,20,30,0">
-
-        <CollectionView.ItemsLayout>
-            <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
-        </CollectionView.ItemsLayout>
-
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <Label Text="{Binding ToDoName}" FontSize="Medium" />
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+    <Grid ColumnSpacing="5"
+          RowSpacing="5" Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="120"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button Text="ToDo" Clicked="OnToDoSubAppClicked"/>
+        <Button Grid.Row="0" Grid.Column="1" Text="Smart Home" Clicked="OnToDoSubAppClicked"/>
+        <Button Grid.Row="0" Grid.Column="2" Text="Fitness" Clicked="OnToDoSubAppClicked"/>
+        <Button Grid.Row="1" Grid.Column="0" Text="Plant Health" Clicked="OnToDoSubAppClicked"/>
+    </Grid>
 
 
 

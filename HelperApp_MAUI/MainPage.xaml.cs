@@ -7,44 +7,15 @@ namespace HelperApp_MAUI;
 
 public partial class MainPage : ContentPage
 {
-    private readonly IRestDataService _dataService;
-
-    public MainPage(IRestDataService dataService)
+    public MainPage()
     {
         InitializeComponent();
-
-        _dataService = dataService;
     }
-
-    protected async override void OnAppearing()
+    async void OnToDoSubAppClicked(object sender, EventArgs e)
     {
-        base.OnAppearing();
+        Debug.WriteLine("--Button clicked--");
 
-        collectionView.ItemsSource = await _dataService.GetAllToDosAsync();
-    }
-
-    async void OnAddToDoClicked(object sender, EventArgs e)
-    {
-        Debug.WriteLine("--Add Button clicked--");
-
-        var navigationParam = new Dictionary<string, object>()
-        {
-            {nameof(ToDo), new ToDo() }
-        };
-
-        await Shell.Current.GoToAsync(nameof(ToDoManagementPage), navigationParam);
-    }
-
-    async void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-    {
-        Debug.WriteLine("--Selected Todo changed--");
-
-        var navigationParam = new Dictionary<string, object>()
-        {
-            {nameof(ToDo), e.CurrentSelection.FirstOrDefault() as ToDo }
-        };
-
-        await Shell.Current.GoToAsync(nameof(ToDoManagementPage), navigationParam);
+        await Shell.Current.GoToAsync(nameof(ToDoMainPage));
     }
 }
 
