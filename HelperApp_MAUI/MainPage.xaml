@@ -17,9 +17,9 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Button Text="ToDo" Clicked="OnToDoSubAppClicked"/>
-        <Button Grid.Row="0" Grid.Column="1" Text="Smart Home" Clicked="OnToDoSubAppClicked"/>
-        <Button Grid.Row="0" Grid.Column="2" Text="Fitness" Clicked="OnToDoSubAppClicked"/>
-        <Button Grid.Row="1" Grid.Column="0" Text="Plant Health" Clicked="OnToDoSubAppClicked"/>
+        <Button Grid.Row="0" Grid.Column="1" Text="Smart Home" Clicked="OnSmartHomeSubAppClicked"/>
+        <Button Grid.Row="0" Grid.Column="2" Text="Fitness" Clicked="OnFitnessSubAppClicked"/>
+        <Button Grid.Row="1" Grid.Column="0" Text="Plant Health" Clicked="OnPlantHealthSubAppClicked"/>
     </Grid>
 
 
