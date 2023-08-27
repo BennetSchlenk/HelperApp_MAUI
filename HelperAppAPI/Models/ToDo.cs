@@ -7,6 +7,8 @@ namespace TODO_API.Models
         [Key]
         public int Id { get; set; }
 
+        public string UserId { get; set; } = string.Empty;
+
         public string? ToDoName { get; set; }
 
     }
