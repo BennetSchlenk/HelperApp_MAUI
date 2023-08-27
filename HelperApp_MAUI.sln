@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelperApp_MAUI", "HelperApp_MAUI\HelperApp_MAUI.csproj", "{17169557-EDA5-4823-B441-3EA26EF716F2}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelperAppAPI", "HelperAppAPI\HelperAppAPI.csproj", "{B3A41BE8-C41E-40C8-B0CF-B8E451B0E968}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{17169557-EDA5-4823-B441-3EA26EF716F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17169557-EDA5-4823-B441-3EA26EF716F2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{17169557-EDA5-4823-B441-3EA26EF716F2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B3A41BE8-C41E-40C8-B0CF-B8E451B0E968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3A41BE8-C41E-40C8-B0CF-B8E451B0E968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3A41BE8-C41E-40C8-B0CF-B8E451B0E968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3A41BE8-C41E-40C8-B0CF-B8E451B0E968}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
