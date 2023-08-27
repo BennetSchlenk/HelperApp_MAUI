@@ -5,9 +5,9 @@
              NavigationPage.HasNavigationBar="False"
              Title="">
 
-    <Grid ColumnSpacing="5"
-          RowSpacing="5" Margin="5">
+    <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="120"/>
             <RowDefinition Height="120"/>
         </Grid.RowDefinitions>
@@ -16,10 +16,11 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Button Text="ToDo" Clicked="OnToDoSubAppClicked"/>
-        <Button Grid.Row="0" Grid.Column="1" Text="Smart Home" Clicked="OnSmartHomeSubAppClicked"/>
-        <Button Grid.Row="0" Grid.Column="2" Text="Fitness" Clicked="OnFitnessSubAppClicked"/>
-        <Button Grid.Row="1" Grid.Column="0" Text="Plant Health" Clicked="OnPlantHealthSubAppClicked"/>
+        <BoxView Grid.ColumnSpan="3" Color="Green" />
+        <Button Grid.Row="1" Grid.Column="0" Text="ToDo" Clicked="OnToDoSubAppClicked" Margin="5"/>
+        <Button Grid.Row="1" Grid.Column="1" Text="Smart Home" Clicked="OnSmartHomeSubAppClicked" Margin="5"/>
+        <Button Grid.Row="1" Grid.Column="2" Text="Fitness" Clicked="OnFitnessSubAppClicked" Margin="5"/>
+        <Button Grid.Row="2" Grid.Column="0" Text="Plant Health" Clicked="OnPlantHealthSubAppClicked" Margin="5"/>
     </Grid>
 
 
