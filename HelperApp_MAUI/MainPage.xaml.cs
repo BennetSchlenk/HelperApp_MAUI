@@ -1,5 +1,8 @@
 ﻿using HelperApp_MAUI.DataService;
 using HelperApp_MAUI.Models;
+using HelperApp_MAUI.Pages.Fitness_Pages;
+using HelperApp_MAUI.Pages.Plant_Health_Pages;
+using HelperApp_MAUI.Pages.Smart_Home_Pages;
 using HelperApp_MAUI.Pages.ToDo_Pages;
 using System.Diagnostics;
 
@@ -7,44 +10,44 @@ namespace HelperApp_MAUI;
 
 public partial class MainPage : ContentPage
 {
-    private readonly IRestDataService _dataService;
-
-    public MainPage(IRestDataService dataService)
+    public MainPage()
     {
         InitializeComponent();
+    }
+    async void OnToDoSubAppClicked(object sender, EventArgs e)
+    {
+#if DEBUG
+        Debug.WriteLine("--Button clicked--");
+#endif
 
-        _dataService = dataService;
+        await Shell.Current.GoToAsync(nameof(ToDoMainPage));
     }
 
-    protected async override void OnAppearing()
+    async void OnFitnessSubAppClicked(object sender, EventArgs e)
     {
-        base.OnAppearing();
+#if DEBUG
+        Debug.WriteLine("--Fitness clicked--");
+#endif
 
-        collectionView.ItemsSource = await _dataService.GetAllToDosAsync();
+        await Shell.Current.GoToAsync(nameof(FitnessMainPage));
     }
 
-    async void OnAddToDoClicked(object sender, EventArgs e)
+    async void OnSmartHomeSubAppClicked(object sender, EventArgs e)
     {
-        Debug.WriteLine("--Add Button clicked--");
+#if DEBUG
+        Debug.WriteLine("--Smart Home clicked--");
+#endif
 
-        var navigationParam = new Dictionary<string, object>()
-        {
-            {nameof(ToDo), new ToDo() }
-        };
-
-        await Shell.Current.GoToAsync(nameof(ToDoManagementPage), navigationParam);
+        await Shell.Current.GoToAsync(nameof(SmartHomeMainPage));
     }
 
-    async void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+    async void OnPlantHealthSubAppClicked(object sender, EventArgs e)
     {
-        Debug.WriteLine("--Selected Todo changed--");
+#if DEBUG
+        Debug.WriteLine("--Plant Health clicked--");
+#endif
 
-        var navigationParam = new Dictionary<string, object>()
-        {
-            {nameof(ToDo), e.CurrentSelection.FirstOrDefault() as ToDo }
-        };
-
-        await Shell.Current.GoToAsync(nameof(ToDoManagementPage), navigationParam);
+        await Shell.Current.GoToAsync(nameof(PlantHealthMainPage));
     }
 }
 

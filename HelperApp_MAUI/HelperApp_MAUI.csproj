@@ -53,6 +53,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Pages\Fitness_Pages\FitnessMainPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Plant_Health_Pages\PlantHealthMainPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Smart_Home_Pages\SmartHomeMainPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\ToDo_Pages\ToDoMainPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\ToDo_Pages\ToDoManagementPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
