@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelperApp_MAUI.Pages.Register_User_Pages.RegisterUserMainPage"
+             NavigationPage.HasNavigationBar="False"
+             Title="Register User">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label TextColor="#000000"
+               Text="User Name:" 
+               Grid.Row="1"
+               Grid.ColumnSpan="4"
+               Padding="5,10,0,0"/>
+
+        <Entry x:Name="UserName" 
+               Placeholder="Enter Name Surname..."
+               Grid.Row="2"
+               Grid.ColumnSpan="4"
+               TextChanged="OnEntryTextChanged"
+               Completed="OnEntryCompleted" />
+
+        <Label TextColor="#000000"
+               Text="Email:" 
+               Grid.Row="3"
+               Grid.ColumnSpan="4"
+               Padding="5,10,0,0"/>
+
+        <Entry x:Name="UserEmail" 
+               Placeholder="Enter Mail Adress..."
+               Grid.Row="4"
+               Grid.ColumnSpan="4"
+               TextChanged="OnEntryTextChanged"
+               Completed="OnEntryCompleted" />
+
+        <Label TextColor="#000000"
+               Text="Password:" 
+               Grid.Row="5"
+               Grid.ColumnSpan="4"
+               Padding="5,10,0,0"/>
+
+        <Entry x:Name="Password" 
+               Placeholder="Enter Password..."
+               IsPassword="True"
+               Grid.Row="6"
+               Grid.ColumnSpan="4"
+               TextChanged="OnEntryTextChanged"
+               Completed="OnEntryCompleted" />
+
+        <Label TextColor="#000000"
+               Text="Re-Type Password:" 
+               Grid.Row="7"
+               Grid.ColumnSpan="4"
+               Padding="5,10,0,0"/>
+
+        <Entry x:Name="Password2" 
+               Placeholder="Enter Password Again..."
+               IsPassword="True"
+               Grid.Row="8"
+               Grid.ColumnSpan="4"
+               TextChanged="OnEntryTextChanged"
+               Completed="OnEntryCompleted" />
+
+        <Label TextColor="#000000"
+               Text="Password Requirements: &#10;Minimum length of 10 characters. &#10;Upper and Lower case. &#10;At least 1 Digit. &#10;At least 1 Non-Alphanumeric character such as &#10;( ) ! @ # ? _" 
+               FontSize="10"
+               Grid.Row="9"
+               Grid.ColumnSpan="4"
+               Padding="5,10,0,0"/>
+
+        <Button Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2" Text="Register" Clicked="LoginClicked" Margin="5"/>
+    </Grid>
+    
+</ContentPage>

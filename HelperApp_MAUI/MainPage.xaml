@@ -3,24 +3,52 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HelperApp_MAUI.MainPage"
              NavigationPage.HasNavigationBar="False"
-             Title="">
+             Title="Helper App Login">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="120"/>
-            <RowDefinition Height="120"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <BoxView Grid.ColumnSpan="3" Color="Green" />
-        <Button Grid.Row="1" Grid.Column="0" Text="ToDo" Clicked="OnToDoSubAppClicked" Margin="5"/>
-        <Button Grid.Row="1" Grid.Column="1" Text="Smart Home" Clicked="OnSmartHomeSubAppClicked" Margin="5"/>
-        <Button Grid.Row="1" Grid.Column="2" Text="Fitness" Clicked="OnFitnessSubAppClicked" Margin="5"/>
-        <Button Grid.Row="2" Grid.Column="0" Text="Plant Health" Clicked="OnPlantHealthSubAppClicked" Margin="5"/>
+        <Label TextColor="#000000"
+               Text="Email:" 
+               Grid.Row="1"
+               Grid.ColumnSpan="4"
+               Padding="5,10,0,0"/>
+        
+        <Entry x:Name="UserEmail" 
+               Placeholder="Enter Mail Adress..."
+               Grid.Row="2"
+               Grid.ColumnSpan="4"
+               TextChanged="OnEntryTextChanged"
+               Completed="OnEntryCompleted" />
+
+        <Label TextColor="#000000"
+               Text="Password:" 
+               Grid.Row="3"
+               Grid.ColumnSpan="4"
+               Padding="5,10,0,0"/>
+
+        <Entry x:Name="Password" 
+               Placeholder="Enter Password..."
+               Grid.Row="4"
+               Grid.ColumnSpan="4"
+               TextChanged="OnEntryTextChanged"
+               Completed="OnEntryCompleted" />
+
+        <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Text="Login" Clicked="LoginClicked" Margin="5"/>
+        <Button Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Text="Register" Clicked="RegisterClicked" Margin="5"/>
     </Grid>
 
 
