@@ -1,32 +1,25 @@
-﻿using HelperApp_MAUI.DataService;
-using HelperApp_MAUI.Models;
 using HelperApp_MAUI.Pages.AppSelection_Pages;
-using HelperApp_MAUI.Pages.Fitness_Pages;
-using HelperApp_MAUI.Pages.Plant_Health_Pages;
-using HelperApp_MAUI.Pages.Register_User_Pages;
-using HelperApp_MAUI.Pages.Smart_Home_Pages;
-using HelperApp_MAUI.Pages.ToDo_Pages;
 using System.Diagnostics;
 
-namespace HelperApp_MAUI;
+namespace HelperApp_MAUI.Pages.Register_User_Pages;
 
-public partial class MainPage : ContentPage
+public partial class RegisterUserMainPage : ContentPage
 {
-    public MainPage()
-    {
-        InitializeComponent();
-    }
+	public RegisterUserMainPage()
+	{
+		InitializeComponent();
+	}
 
-     void OnEntryTextChanged(object sender, EventArgs e)
+    void OnEntryTextChanged(object sender, EventArgs e)
     {
 #if DEBUG
         Debug.WriteLine("--Entry value changed--");
 #endif
 
-       
+
     }
 
-     void OnEntryCompleted(object sender, EventArgs e)
+    void OnEntryCompleted(object sender, EventArgs e)
     {
 #if DEBUG
         Debug.WriteLine("--Entered Value--");
@@ -39,7 +32,7 @@ public partial class MainPage : ContentPage
 #if DEBUG
         Debug.WriteLine("--Login clicked--");
 #endif
-        //TODO Implement Login verfification and Request jwt Token
+
         await Shell.Current.GoToAsync(nameof(AppSelectionMainPage));
     }
 
@@ -52,4 +45,3 @@ public partial class MainPage : ContentPage
         await Shell.Current.GoToAsync(nameof(RegisterUserMainPage));
     }
 }
-

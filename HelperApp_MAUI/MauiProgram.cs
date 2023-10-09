@@ -1,6 +1,8 @@
 ﻿using HelperApp_MAUI.DataService;
+using HelperApp_MAUI.Pages.AppSelection_Pages;
 using HelperApp_MAUI.Pages.Fitness_Pages;
 using HelperApp_MAUI.Pages.Plant_Health_Pages;
+using HelperApp_MAUI.Pages.Register_User_Pages;
 using HelperApp_MAUI.Pages.Smart_Home_Pages;
 using HelperApp_MAUI.Pages.ToDo_Pages;
 using Microsoft.Extensions.Logging;
@@ -27,6 +29,10 @@ public static class MauiProgram
         builder.Services.AddSingleton<IRestDataService, RestDataService>();
 
         builder.Services.AddSingleton<MainPage>();
+
+        builder.Services.AddTransient<RegisterUserMainPage>();
+
+        builder.Services.AddTransient<AppSelectionMainPage>();
 
         builder.Services.AddTransient<ToDoMainPage>();
         builder.Services.AddTransient<ToDoManagementPage>();
